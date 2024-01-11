@@ -35,10 +35,26 @@ function App() {
   // 1. console.log("1"); 2. state 3. useEffect 4. state มาก่อน  useEffect ถึงทำงาน
   //DEFINE Fn
   // CALL FN
+
+  /*
   useEffect(() => {
     console.log(`useEffect ${category}`);
     //if (category !== "") fetchLists();
-  }, [category]);
+  }, [category]); // <<= category ไม่เปลี่ยน ไม่รัน
+*/
+
+  /*
+  useEffect(() => {
+    console.log(`useEffect ${category}`);
+    //if (category !== "") fetchLists();
+  }, [category, count]); <<= category และ count ไม่เปลี่ยน ไม่รัน
+*/
+  /*
+  useEffect(() => {
+    console.log(`Only First Render`);
+    //if (category !== "") fetchLists();
+  }, []); // <<< ว่าง จะรันแค่ครั้งแรกตอน npm run start 
+*/
 
   return (
     <div>
